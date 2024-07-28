@@ -1,4 +1,6 @@
-package org.uniproject;
+package org.uniproject.model;
+
+import org.uniproject.enums.StudyProfileEnum;
 
 public class University {
   String id;
@@ -9,15 +11,16 @@ public class University {
 
   int yearOfFoundation;
 
-  StudyProfile mainProfile;
+  StudyProfileEnum mainProfile;
 
-  public University(String id, String fullName, String shortName, int yearOfFoundation, StudyProfile mainProfile) {
+  public University(String id, String fullName, String shortName, int yearOfFoundation, StudyProfileEnum mainProfile) {
     this.id = id;
     this.fullName = fullName;
     this.shortName = shortName;
     this.yearOfFoundation = yearOfFoundation;
     this.mainProfile = mainProfile;
   }
+  public University(){}
 
   public University setId(String id) {
     this.id = id;
@@ -39,7 +42,7 @@ public class University {
     return this;
   }
 
-  public University setMainProfile(StudyProfile mainProfile) {
+  public University setMainProfile(StudyProfileEnum mainProfile) {
     this.mainProfile = mainProfile;
     return this;
   }
@@ -61,7 +64,7 @@ public class University {
     return yearOfFoundation;
   }
 
-  public StudyProfile getMainProfile() {
+  public StudyProfileEnum getMainProfile() {
     return mainProfile;
   }
 

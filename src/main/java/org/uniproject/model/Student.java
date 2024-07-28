@@ -1,4 +1,4 @@
-package org.uniproject;
+package org.uniproject.model;
 
 public class Student {
   String fullName;
@@ -13,6 +13,7 @@ public class Student {
     this.currentCourseNumber = currentCourseNumber;
     this.avgExamScore = avgExamScore;
   }
+  public Student(){}
   public Student setFullName(String fullName) {
     this.fullName = fullName;
     return this;
