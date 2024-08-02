@@ -1,11 +1,15 @@
 package org.uniproject.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Student {
+  @SerializedName("Full name")
   String fullName;
-
+  @SerializedName("University ID")
   String universityId;
-
+  @SerializedName("Course number")
   int currentCourseNumber;
+  @SerializedName("Average exam score")
   float avgExamScore;
   public Student(String fullName, String universityId, int currentCourseNumber, float avgExamScore) {
     this.fullName = fullName;
@@ -52,7 +56,7 @@ public class Student {
 
   @Override
   public String toString() {
-    return String.format("Имя: %s\nID университета: %s\nНомер курса: %d\n" +
+    return String.format("%nИмя: %s%nID университета: %s%nНомер курса: %d%n" +
             "Средний балл: %.2f",
         getFullName(), getUniversityId(),
         getCurrentCourseNumber(), getAvgExamScore());

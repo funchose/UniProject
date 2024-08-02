@@ -1,4 +1,4 @@
-package org.uniproject;
+package org.uniproject.utils;
 
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -7,7 +7,6 @@ import org.uniproject.enums.StudyProfileEnum;
 import org.uniproject.model.Student;
 import org.uniproject.model.University;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,12 +16,17 @@ public class ExcelConverter {
   private static ExcelConverter converter;
   XSSFSheet studentSheet;
   XSSFSheet universitySheet;
+
+  public XSSFWorkbook getWorkbook() {
+    return workbook;
+  }
+
   XSSFWorkbook workbook;
 
   private ExcelConverter() {
   }
 
-  public static ExcelConverter getInstance() {
+  public static ExcelConverter getExcelConverterInstance() {
     if (converter == null) {
       converter = new ExcelConverter();
     }
